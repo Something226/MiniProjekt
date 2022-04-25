@@ -7,9 +7,19 @@ namespace MiniProjekt
         static void Main(string[] args)
         {
             AllyFighter fuling = new AllyFighter();
-            EnemyFighter snuskig = new EnemyFighter();
+            EnemyFightre snuskig = new EnemyFightre();
 
-            FightSequence skitFight = new FightSequence();
+            System.Console.WriteLine("Här demonstrerar jag arv i två led samt komposition");
+
+            Console.ReadLine();
+
+            FightSequence.Fight(fuling, snuskig);
+
+            Console.ReadLine();
+
+
+
+
         }
     }
 }

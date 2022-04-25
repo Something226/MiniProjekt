@@ -8,21 +8,21 @@ namespace MiniProjekt
         /* Class creates a sequence for a fight, will be used by player to progress their fighter and allow for custom battles */
 
         //Fight-method, takes two fighter classes
-        public static void Fight(Fighter playerFighter, Fighter enemyFighter)
+        public static void Fight(Fighter AllyFighter, Fighter EnemyFightre)
         {
             //Writeline tells user fight has been initiated, Fighter.GetName used to display names of fighters to user
-            Console.WriteLine(playerFighter.GetName() + " and " + enemyFighter.GetName() + " will now fight to the death!");
+            Console.WriteLine(AllyFighter.GetName() + " and " + EnemyFightre.GetName() + " will now fight to the death!");
 
             //Fight-loop, both Fighter-classes attack each other ones per cycle of Fight-loop, if one Fighter's HP reaches 0, Fighter.GetAlive = False = Loop ends
-            while (playerFighter.GetAlive() && enemyFighter.GetAlive())
+            while (AllyFighter.GetAlive() && EnemyFightre.GetAlive())
             {
-                playerFighter.Attack(enemyFighter);
+                AllyFighter.Attack(EnemyFightre);
 
-                Console.WriteLine(playerFighter.GetName() + " attacked " + enemyFighter.GetName() + " for " + playerFighter.GetDmgAmount() + ", " + enemyFighter.GetName() + " now has: " + enemyFighter.GetHP() + " HP");
+                Console.WriteLine(AllyFighter.GetName() + " attacked " + EnemyFightre.GetName() + " for " + AllyFighter.GetDmgAmount() + ", " + EnemyFightre.GetName() + " now has: " + EnemyFightre.GetHP() + " HP");
 
-                enemyFighter.Attack(playerFighter);
+                EnemyFightre.Attack(AllyFighter);
 
-                Console.WriteLine(enemyFighter.GetName() + " attacked " + playerFighter.GetName() + " for " + enemyFighter.GetDmgAmount() + ", " + playerFighter.GetName() + " now has: " + playerFighter.GetHP() + " HP\nPress ENTER to continue");
+                Console.WriteLine(EnemyFightre.GetName() + " attacked " + AllyFighter.GetName() + " for " + EnemyFightre.GetDmgAmount() + ", " + AllyFighter.GetName() + " now has: " + AllyFighter.GetHP() + " HP\nPress ENTER to continue");
 
                 Console.ReadLine();
 
@@ -31,17 +31,17 @@ namespace MiniProjekt
             }
 
             //if-statments tells player who won the fight, Dependant on Fighter.GetAlive()
-            if (!enemyFighter.GetAlive() && !playerFighter.GetAlive())
+            if (!EnemyFightre.GetAlive() && !AllyFighter.GetAlive())
             {
                 Console.WriteLine("It's a draw!");
             }
-            else if (!playerFighter.GetAlive())
+            else if (!AllyFighter.GetAlive())
             {
-                Console.WriteLine(enemyFighter.GetName() + " won!");
+                Console.WriteLine(EnemyFightre.GetName() + " won!");
             }
-            else if (!enemyFighter.GetAlive())
+            else if (!EnemyFightre.GetAlive())
             {
-                Console.WriteLine(playerFighter.GetName() + " won!");
+                Console.WriteLine(AllyFighter.GetName() + " won!");
             }
 
 
