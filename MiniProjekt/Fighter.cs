@@ -8,7 +8,7 @@ namespace MiniProjekt
         //variables for Fighter class
         protected Random number;
 
-        protected Weapon weapon = new Weapon();
+        protected Rifle weapon = new Rifle();
 
         //List with a set of names that will potentially be used to randomize enemyFighter name
         protected List<string> enemyNames = new List<string>() { "Arnold", "Script Kid", "Mikael Bergström", "Crewmate", "Walter White" };
@@ -35,8 +35,7 @@ namespace MiniProjekt
         //attack-method, attacks selected target, uses weapon class to deal dmg
         public void Attack(Fighter target)
         {
-
-            dmgAmount = strength;
+            dmgAmount = strength + weapon.ReturnDmg();
 
             target.hp -= dmgAmount;
 

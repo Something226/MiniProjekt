@@ -17,9 +17,6 @@ namespace MiniProjekt
 
             Console.ReadLine();
 
-
-
-
         }
     }
 }

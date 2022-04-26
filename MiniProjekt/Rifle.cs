@@ -4,22 +4,20 @@ namespace MiniProjekt
 {
     public class Rifle : Gun
     {
-        Random dmgAmount;
+        protected Random dmg = new Random();
 
-        private int dmg;
-        private int hitChance;
+        private int dmgAmount;
 
         public Rifle()
         {
             gunType = "Rifle";
 
-            hitChance = accuracy.Next(0, 5);
-            dmg = dmgAmount.Next(10, 20);
+            dmgAmount = dmg.Next(5, 20);
         }
 
         public int ReturnDmg()
         {
-            return dmg;
+            return dmgAmount;
         }
     }
 }
