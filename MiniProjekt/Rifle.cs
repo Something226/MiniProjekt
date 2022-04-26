@@ -11,12 +11,11 @@ namespace MiniProjekt
         public Rifle()
         {
             gunType = "Rifle";
-
-            dmgAmount = dmg.Next(5, 20);
         }
 
         public int ReturnDmg()
         {
+            dmgAmount = dmg.Next(5, 20);
             return dmgAmount;
         }
     }
