@@ -8,7 +8,7 @@ namespace MiniProjekt
         /* Class creates a sequence for a fight, will be used by player to progress their fighter and allow for custom battles */
 
         //Fight-method, takes two fighter classes
-        public static void Fight(Fighter AllyFighter, Fighter EnemyFightre)
+        public static void Fight(AllyFighter AllyFighter, EnemyFightre EnemyFightre)
         {
             //Writeline tells user fight has been initiated, Fighter.GetName used to display names of fighters to user
             Console.WriteLine(AllyFighter.GetName() + " and " + EnemyFightre.GetName() + " will now fight to the death!");

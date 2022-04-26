@@ -12,7 +12,7 @@ namespace MiniProjekt
 
             name = enemyNames[number.Next(enemyNames.Count)];
 
-            Rifle ak47 = new Rifle();
+            weapon = new Rifle();
 
         }
 
